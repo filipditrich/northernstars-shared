@@ -6,6 +6,7 @@ exports.userHelper = require('./src/helpers/user.helper');
 exports.routeHelper = require('./src/helpers/route.helper');
 exports.passportHelper = require('./src/helpers/passport.helper');
 exports.nodemailerHelper = require('./src/helpers/nodemailer.helper');
+exports.mongooseHelper = require('./src/helpers/mongoose.helper');
 exports.mailHelper = require('./src/helpers/mail.helper');
 exports.genericHelper = require('./src/helpers/generic.helper');
 exports.errorHelper = require('./src/helpers/error.helper');
