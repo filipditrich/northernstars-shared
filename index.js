@@ -46,4 +46,4 @@ exports.sysEnums = require('./src/assets/system-enums.asset');
 /**
  * Email Templates
  */
-exports.emailTemplates = require('./src/templates/emails/index');
+// exports.emailTemplates = require('./src/templates/emails/index');
