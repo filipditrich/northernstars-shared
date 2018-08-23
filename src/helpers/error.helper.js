@@ -1,5 +1,5 @@
-const codes = require('../assets/system-codes.asset');
 const _ = require('lodash');
+const codes = require('../assets/system-codes.asset');
 const services = require('../config/services.config');
 
 /**
