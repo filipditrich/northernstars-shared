@@ -45,7 +45,7 @@ exports.roleAuthorization = (req, res, next, roles) => {
         const user = req.user || false;
         if (!user) reject(codes.AUTH.ROLES.UNAUTHORIZED_ACCESS);
 
-        if (user.roles === sysEnums.AUTH.ROLES.anyone.key) { return resolve(); }
+        if (roles === sysEnums.AUTH.ROLES.anyone.key) { return resolve(); }
 
         if (user.roles.some(role => roles.indexOf(role) >= 0)){
             return resolve();
