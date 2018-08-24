@@ -42,9 +42,7 @@ exports.requireSecret = (req, res, next) => {
 exports.roleAuthorization = (req, res, next, roles) => {
     return new Promise((resolve, reject) => {
 
-        if (roles === 'anybody') { resolve() }
-
-        let user = !!req.user ? req.user : !!req.headers['authorization'] ? jwtDecode(req.headers['authorization']) : false;
+        const user = req.user || false;
         if (!user) reject(codes.AUTH.ROLES.UNAUTHORIZED_ACCESS);
 
         if (user.roles.some(role => roles.indexOf(role) >= 0)){
@@ -111,26 +109,21 @@ exports.microserviceCommunication = (req, res, next) => {
  * @returns {*}
  */
 exports.verifyToken = (req, res, next) => {
+    return new Promise((resolve, reject) => {
+        const token = req.headers['authorization'];
 
-    const token = req.headers['authorization'];
+        if (!token) reject(errorHelper.prepareError(codes.HEADERS.BAD_STRUCT));
 
-    if (!token) return next(errorHelper.prepareError(codes.HEADERS.BAD_STRUCT));
-
-    try {
-        jwt.verify(token, config[env].token.secret, (err, decoded) => {
+        jwt.verify(token, config[env].token.secret, (error, decoded) => {
             if (error) {
-                if (error instanceof jwt.JsonWebTokenError) return next(errorHelper.prepareError(codes.AUTH.TOKEN.INVALID));
-                if (error instanceof jwt.NotBeforeError) return next(errorHelper.prepareError(codes.AUTH.TOKEN.INVALID));
-                if (error instanceof jwt.TokenExpiredError) return next(errorHelper.prepareError(codes.AUTH.TOKEN.EXPIRED));
+                if (error instanceof jwt.JsonWebTokenError) reject(errorHelper.prepareError(codes.AUTH.TOKEN.INVALID));
+                else if (error instanceof jwt.NotBeforeError) reject(errorHelper.prepareError(codes.AUTH.TOKEN.INVALID));
+                else if (error instanceof jwt.TokenExpiredError) reject(errorHelper.prepareError(codes.AUTH.TOKEN.EXPIRED));
+                else reject(errorHelper.prepareError(error));
+            } else {
+                req.user = decoded;
+                resolve(decoded);
             }
-            console.log(decoded);
-            req.user = decoded;
         });
-        return next();
-    } catch (error) {
-        if (error instanceof jwt.JsonWebTokenError) return next(errorHelper.prepareError(codes.AUTH.TOKEN.INVALID));
-        if (error instanceof jwt.NotBeforeError) return next(errorHelper.prepareError(codes.AUTH.TOKEN.INVALID));
-        if (error instanceof jwt.TokenExpiredError) return next(errorHelper.prepareError(codes.AUTH.TOKEN.EXPIRED));
-    }
-
+    });
 };

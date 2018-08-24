@@ -14,13 +14,17 @@ class Route {
         this.roles = auth.roles || false;
 
         this.middleware = {
-            secret: !!auth.secret && auth.secret ? (req, res, next) => { return StrategiesCtrl.requireSecret(req, res, next); } : false,
+            secret: !!auth.secret && auth.secret ? (req, res, next) => {
+                return StrategiesCtrl.requireSecret(req, res, next);
+            } : false,
             authorization: !!auth.roles && auth.roles ? (req, res, next) => {
-                return StrategiesCtrl.verifyToken(req, res, next).then(() => {
-                    return StrategiesCtrl.roleAuthorization(req, res, next, auth.roles);
-                }).catch(error => { return next(error); })
+                return Promise.all([
+                    StrategiesCtrl.verifyToken(req, res, next),
+                    StrategiesCtrl.roleAuthorization(req, res, next, auth.roles)
+                ]);
             } : false
         };
+
         this.controller = controller;
 
         this.params = [];
