@@ -2,7 +2,23 @@ const codes = require('../assets/system-codes.asset');
 const env = require('express')().get('env');
 const errorHelper = require('./error.helper');
 const _ = require('lodash');
+const request = require('request-promise');
 
+exports.updateService = function (serviceConfig) {
+
+    request.post({
+        url: 'http://localhost:4000/api/sys/services',
+        headers: {
+            'Content-Type': 'application/json',
+            'Application-ID': '',
+            'X-Secret': ''
+        },
+        body: {
+            test: "TEST BDOY"
+        }
+    })
+
+};
 
 /**
  * @description: Creates a new error when reaching invalid endpoint and passes to next express middleware
