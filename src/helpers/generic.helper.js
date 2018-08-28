@@ -6,17 +6,18 @@ const request = require('request-promise');
 
 exports.updateService = function (serviceConfig) {
 
-    request.post({
-        url: 'http://localhost:4000/api/sys/services',
-        headers: {
-            'Content-Type': 'application/json',
-            'Application-ID': `${require('../config/server.config')[serviceConfig.environment].consumers[0]}`,
-            'X-Secret': `${require('../config/server.config')[serviceConfig.environment].secret.secret}x${require('../config/server.config')[serviceConfig.environment].secret.index}`
-        },
+    const headers = {};
+    headers['Application-ID'] = `${require('../config/server.config')[serviceConfig.environment].consumers[0]}`;
+    headers['X-Secret'] = `${require('../config/server.config')[serviceConfig.environment].secret.secret}x${require('../config/server.config')[serviceConfig.environment].secret.index}`;
+
+    return request({
+        method: 'POST',
+        uri: 'http://localhost:4000/api/sys/services', headers,
         body: {
-            test: "TEST BDOY"
-        }
-    })
+            service: serviceConfig
+        },
+        json: true
+    });
 
 };
 
