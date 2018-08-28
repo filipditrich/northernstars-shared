@@ -10,8 +10,8 @@ exports.updateService = function (serviceConfig) {
         url: 'http://localhost:4000/api/sys/services',
         headers: {
             'Content-Type': 'application/json',
-            'Application-ID': '',
-            'X-Secret': ''
+            'Application-ID': `${require('../config/server.config')[serviceConfig.environment].consumers[0]}`,
+            'X-Secret': `${require('../config/server.config')[serviceConfig.environment].secret.secret}x${require('../config/server.config')[serviceConfig.environment].secret.index}`
         },
         body: {
             test: "TEST BDOY"
