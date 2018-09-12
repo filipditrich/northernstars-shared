@@ -1,5 +1,19 @@
 const _ = require('lodash');
 const codes = require('../assets/system-codes.asset');
+const Joi = require('joi');
+
+/**
+ * @description Generates a validation error from Joi output
+ * @param error
+ */
+exports.validationError = function (error) {
+    return {
+        name: 'VALIDATION_ERROR',
+        message: !!error.details ? _.capitalize(error.details[0].message.replace(/"/g, "")) : error,
+        success: false,
+        status: 400
+    };
+};
 
 /**
  * @description: Returns a new error based on the input
