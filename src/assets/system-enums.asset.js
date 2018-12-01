@@ -6,6 +6,7 @@ module.exports = {
             admin: { key: 'admin', value: 'Administrator' },
             moderator: { key: 'moderator', value: 'Moderator' },
             player: { key: 'player', value: 'Player' },
+            deleted: { key: 'deleted', value: 'Deleted' },
 
             anyone: { key: 'anyone', value: 'Anyone' }
         },
