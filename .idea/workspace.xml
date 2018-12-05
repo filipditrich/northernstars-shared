@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67c1e8d-b15a-44fc-b2e4-20a19ead2d2d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/generic.helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/generic.helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/templates/emails/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/emails/registration-requested/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/emails/registration-requested/footer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/emails/registration-requested/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/emails/registration-requested/index.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,11 +36,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generic.helper.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generic.helper.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/helpers/generic.helper.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/templates/emails/registration-requested/index.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="6" selection-start-line="24" selection-end-line="24" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -71,6 +81,8 @@
         <option value="$PROJECT_DIR$/src/templates/emails/password-reset-request/index.ejs" />
         <option value="$PROJECT_DIR$/src/assets/system-enums.asset.js" />
         <option value="$PROJECT_DIR$/src/helpers/generic.helper.js" />
+        <option value="$PROJECT_DIR$/src/templates/emails/registration-requested/index.ejs" />
+        <option value="$PROJECT_DIR$/src/templates/emails/registration-requested/footer.ejs" />
       </list>
     </option>
   </component>
@@ -87,10 +99,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1366" />
-    <option name="height" value="699" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-114" />
+    <option name="y" value="-878" />
+    <option name="width" value="1600" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -104,6 +117,32 @@
             <path>
               <item name="northernstars-shared" type="b2602c69:ProjectViewProjectNode" />
               <item name="northernstars-shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="northernstars-shared" type="b2602c69:ProjectViewProjectNode" />
+              <item name="northernstars-shared" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="northernstars-shared" type="b2602c69:ProjectViewProjectNode" />
+              <item name="northernstars-shared" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="northernstars-shared" type="b2602c69:ProjectViewProjectNode" />
+              <item name="northernstars-shared" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="emails" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="northernstars-shared" type="b2602c69:ProjectViewProjectNode" />
+              <item name="northernstars-shared" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="emails" type="462c0819:PsiDirectoryNode" />
+              <item name="registration-requested" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -144,18 +183,18 @@
       <workItem from="1543771564455" duration="765000" />
       <workItem from="1543838579535" duration="553000" />
       <workItem from="1543962028235" duration="1038000" />
-      <workItem from="1544001464743" duration="639000" />
+      <workItem from="1544001464743" duration="1493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6279000" />
+    <option name="totallyTimeSpent" value="7133000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1366" height="699" extended-state="0" />
+    <frame x="-114" y="-878" width="1600" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24981412" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2127929" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -164,7 +203,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29069766" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2240717" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -275,16 +314,6 @@
     <entry file="file://$PROJECT_DIR$/src/templates/emails/registration-finished/index.ejs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/emails/registration-requested/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/emails/registration-requested/footer.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/emails/registration-invitation/index.ejs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -314,6 +343,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/emails/header.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/emails/registration-requested/footer.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="5" selection-start-line="26" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/emails/registration-requested/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="6" selection-start-line="24" selection-end-line="24" selection-end-column="6" />
         </state>
       </provider>
     </entry>
