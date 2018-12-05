@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67c1e8d-b15a-44fc-b2e4-20a19ead2d2d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/emails/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/emails/footer.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/emails/forgotten-username/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/emails/forgotten-username/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/emails/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/emails/header.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/emails/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/emails/password-reset-request/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/emails/password-reset-request/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/emails/registration-approved/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/emails/registration-approved/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/emails/registration-finished/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/emails/registration-finished/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/emails/registration-invitation/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/emails/registration-invitation/index.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,11 +16,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/templates/emails/forgotten-username/index.ejs">
+      <file leaf-file-name="footer.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/templates/emails/footer.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+            <state relative-caret-position="120">
+              <caret line="8" column="84" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
+              <folding>
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,13 +56,13 @@
         <option value="$PROJECT_DIR$/src/helpers/generic.helper.js" />
         <option value="$PROJECT_DIR$/src/templates/emails/registration-requested/footer.ejs" />
         <option value="$PROJECT_DIR$/src/templates/emails/registration-requested/index.ejs" />
-        <option value="$PROJECT_DIR$/src/templates/emails/footer.ejs" />
         <option value="$PROJECT_DIR$/src/templates/emails/header.ejs" />
         <option value="$PROJECT_DIR$/src/templates/emails/registration-approved/index.ejs" />
         <option value="$PROJECT_DIR$/src/templates/emails/registration-finished/index.ejs" />
         <option value="$PROJECT_DIR$/src/templates/emails/registration-invitation/index.ejs" />
         <option value="$PROJECT_DIR$/src/templates/emails/password-reset-request/index.ejs" />
         <option value="$PROJECT_DIR$/src/templates/emails/forgotten-username/index.ejs" />
+        <option value="$PROJECT_DIR$/src/templates/emails/footer.ejs" />
       </list>
     </option>
   </component>
@@ -121,14 +116,6 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="emails" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="northernstars-shared" type="b2602c69:ProjectViewProjectNode" />
-              <item name="northernstars-shared" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="emails" type="462c0819:PsiDirectoryNode" />
-              <item name="forgotten-username" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -175,12 +162,12 @@
       <workItem from="1543771564455" duration="765000" />
       <workItem from="1543838579535" duration="553000" />
       <workItem from="1543962028235" duration="1038000" />
-      <workItem from="1544001464743" duration="3559000" />
+      <workItem from="1544001464743" duration="3758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9199000" />
+    <option name="totallyTimeSpent" value="9398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-114" y="-878" width="1600" height="878" extended-state="6" />
@@ -319,16 +306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/emails/footer.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/emails/header.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -387,6 +364,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/emails/footer.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="84" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
