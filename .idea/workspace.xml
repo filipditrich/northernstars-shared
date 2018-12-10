@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67c1e8d-b15a-44fc-b2e4-20a19ead2d2d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/templates/emails/match-update/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/system-codes.asset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/system-codes.asset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/mail.helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/mail.helper.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mail.helper.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/helpers/mail.helper.js">
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/templates/emails/match-update/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            <state relative-caret-position="375">
+              <caret line="25" column="97" selection-start-line="25" selection-start-column="97" selection-end-line="25" selection-end-column="97" />
             </state>
           </provider>
         </entry>
@@ -65,6 +64,7 @@
         <option value="$PROJECT_DIR$/src/helpers/nodemailer.helper.js" />
         <option value="$PROJECT_DIR$/src/assets/system-codes.asset.js" />
         <option value="$PROJECT_DIR$/src/helpers/mail.helper.js" />
+        <option value="$PROJECT_DIR$/src/templates/emails/match-update/index.ejs" />
       </list>
     </option>
   </component>
@@ -120,6 +120,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="northernstars-shared" type="b2602c69:ProjectViewProjectNode" />
+              <item name="northernstars-shared" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -167,12 +173,12 @@
       <workItem from="1543838579535" duration="553000" />
       <workItem from="1543962028235" duration="1038000" />
       <workItem from="1544001464743" duration="4374000" />
-      <workItem from="1544447503445" duration="3200000" />
+      <workItem from="1544447503445" duration="4663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13214000" />
+    <option name="totallyTimeSpent" value="14677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-114" y="-878" width="1600" height="878" extended-state="6" />
@@ -320,20 +326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/emails/registration-invitation/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/emails/registration-requested/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="22" lean-forward="true" selection-end-line="25" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/emails/password-reset-request/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="511">
@@ -392,6 +384,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/emails/registration-invitation/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/emails/registration-requested/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/emails/match-update/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="97" selection-start-line="25" selection-start-column="97" selection-end-line="25" selection-end-column="97" />
         </state>
       </provider>
     </entry>
