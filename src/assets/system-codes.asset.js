@@ -197,6 +197,14 @@ module.exports = {
                 status: 200,
                 success: true
             }
+        },
+        INPUT: {
+            OBJECT_ID_ERR: {
+                name: 'OBJECT_ID_FAILED',
+                message: 'Requested input is not a valid ObjectID',
+                status: 400,
+                success: false
+            }
         }
     }
 
