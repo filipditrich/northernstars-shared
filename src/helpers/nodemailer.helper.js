@@ -6,20 +6,20 @@ const env = require('express')().get('env');
 /**
  * @description Creates NodeMailer Transport
  */
-exports.transporter = nodemailer.createTransport( config[env].email.transporter );
+module.exports.transporter = nodemailer.createTransport(config[env].email.transporter);
 
 /**
  * @description Exports Sender Config
  * @type {*|string|RTCRtpSender}
  */
-exports.sender = config[env].email.sender;
+module.exports.sender = config[env].email.sender;
 
 /**
  * @description Checks the connection to SMTP
  * @author filipditrich
  * @returns {Promise<any>}
  */
-exports.checkAuth = () => {
+module.exports.checkAuth = () => {
     return new Promise((resolve, reject) => {
 
         const options = config[env].email.transporter;

@@ -18,17 +18,49 @@ module.exports.mail = (template, contexts) => {
     }
 
     return new Promise((resolve, reject) => {
+        const sent = [], unsent = [];
         loadTemplate(template, contexts).then(results => {
-            Promise.all(results.map(result => {
+            const promises = [];
+            results.forEach(result => {
                 mailing.transporter.sendMail({
                     to: result.context.email,
-                    from: mailing.sender,
+                    from: mailer.sender,
                     subject: result.context.subject,
-                    html: result.email,
+                    html: result.email
+                }, (err, info) => {
+                    promises.push(new Promise(resolve => resolve()));
+                    console.log(err, info);
+                    if (err) {
+                        unsent.push(info.messageId)
+                    } else {
+                        sent.push(info.messageId)
+                    }
                 });
-            })).then(() => resolve()).catch(e => reject(e));
-        }).catch(e => reject(e));
-    });
+            });
+            Promise.all(promises).then(otp => {
+                resolve(otp, sent, unsent);
+            }).catch(error => {
+                resolve(error, sent, unsent);
+            });
+        });
+    })
+
+    // return new Promise((resolve, reject) => {
+    //     const sent = [], unsent = [];
+    //     loadTemplate(template, contexts).then(results => {
+    //         const promises = [];
+    //         results.forEach(result => {
+    //             mailing.transporter.sendMail({
+    //                 to: result.context.email,
+    //                 from: mailing.sender,
+    //                 subject: result.context.subject,
+    //                 html: result.email,
+    //             }
+    //         });
+    //         Promise.all(promises);
+    //         })).then(() => resolve()).catch(e => reject(e));
+    //     }).catch(e => reject(e));
+    // });
 
 };
 
