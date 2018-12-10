@@ -105,9 +105,15 @@ module.exports = {
     MAILING: {
         SENT: {
             name: 'MAILING_SENT_OK',
-            message: 'Mail sent successfully.',
+            message: 'Mail(s) sent successfully.',
             status: 200,
             success: true
+        },
+        NOT_SENT: {
+            name: 'MAILING_FAILED',
+            message: 'Mail(s) couldn\'t be sent',
+            status: 400,
+            success: false
         }
     },
 
@@ -136,7 +142,7 @@ module.exports = {
         UNREACHABLE: {
             name: 'SERVICE_UNREACHABLE',
             message: 'Service server is currently unreachable.',
-            status: 500,
+            status: 503,
             success: false
         }
     },
@@ -146,6 +152,11 @@ module.exports = {
             name: 'RESOURCE_LOADED',
             status: 200,
             success: true
+        },
+        NOT_LOADED: {
+            name: 'RESOURCE_COULD_NOT_BE_LOADED',
+            status: 400,
+            success: false
         }
     },
 
@@ -161,6 +172,11 @@ module.exports = {
             message: 'This request is invalid.',
             status: 403,
             success: false
+        },
+        PROCESSED: {
+            name: 'REQUEST_PROCESSED',
+            status: 200,
+            success: true
         },
         CHECK: {
             QUERY_MISSING: {
@@ -181,11 +197,6 @@ module.exports = {
                 status: 200,
                 success: true
             }
-        },
-        PROCESSED: {
-            name: 'REQUEST_PROCESSED',
-            status: 200,
-            success: true
         }
     }
 

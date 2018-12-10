@@ -18,49 +18,29 @@ module.exports.mail = (template, contexts) => {
     }
 
     return new Promise((resolve, reject) => {
-        const sent = [], unsent = [];
         loadTemplate(template, contexts).then(results => {
+            let sent = [], unsent = [];
             const promises = [];
             results.forEach(result => {
-                mailing.transporter.sendMail({
-                    to: result.context.email,
-                    from: mailing.sender,
-                    subject: result.context.subject,
-                    html: result.email
-                }, (err, info) => {
-                    promises.push(new Promise(resolve => resolve()));
-                    console.log(err, info);
-                    if (err) {
-                        unsent.push(info.messageId)
-                    } else {
-                        sent.push(info.messageId)
-                    }
-                });
+                promises.push(new Promise((success, error) => {
+                    mailing.transporter.sendMail({
+                        to: result.context.email,
+                        from: mailing.sender,
+                        subject: result.context.subject,
+                        html: result.email
+                    }, (err, info) => {
+                        if (err) { unsent.push(err.rejected[0]); } else { sent.push(info.accepted[0]); }
+                        success();
+                    });
+                }));
             });
-            Promise.all(promises).then(otp => {
-                resolve(otp, sent, unsent);
+            Promise.all(promises).then(() => {
+                resolve({ sent, unsent });
             }).catch(error => {
-                resolve(error, sent, unsent);
+                reject(error);
             });
         });
     })
-
-    // return new Promise((resolve, reject) => {
-    //     const sent = [], unsent = [];
-    //     loadTemplate(template, contexts).then(results => {
-    //         const promises = [];
-    //         results.forEach(result => {
-    //             mailing.transporter.sendMail({
-    //                 to: result.context.email,
-    //                 from: mailing.sender,
-    //                 subject: result.context.subject,
-    //                 html: result.email,
-    //             }
-    //         });
-    //         Promise.all(promises);
-    //         })).then(() => resolve()).catch(e => reject(e));
-    //     }).catch(e => reject(e));
-    // });
 
 };
 
@@ -90,6 +70,5 @@ function loadTemplate (template, contexts) {
                 .catch(error => { return reject(error) });
         });
     }));
-
 
 }
