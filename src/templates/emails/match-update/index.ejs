@@ -19,7 +19,7 @@
                         <ul>
                             <% for(let prop in diff) { %>
                                 <% if (diff.hasOwnProperty(prop)) { %>
-                                    <li><%=key%>: <%= diff[prop] %></li>
+                                    <li><%=prop%>: <%= diff[prop] %></li>
                                 <% } %>
                             <% } %>
                         </ul>
