@@ -24,7 +24,7 @@ module.exports.mail = (template, contexts) => {
             results.forEach(result => {
                 mailing.transporter.sendMail({
                     to: result.context.email,
-                    from: mailer.sender,
+                    from: mailing.sender,
                     subject: result.context.subject,
                     html: result.email
                 }, (err, info) => {
