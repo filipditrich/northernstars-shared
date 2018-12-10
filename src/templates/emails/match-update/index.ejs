@@ -17,11 +17,13 @@
                     <div class="contentEditable">
                         <p>A match '<%=match.title%>' that you are enrolled in has been updated with the following changes:</p>
                         <ul>
+                            <hr>
                             <% for(let prop in diff) { %>
                                 <% if (diff.hasOwnProperty(prop)) { %>
-                                    <li><%=prop%>: <%= diff[prop] %></li>
+                                    <li>» <%=prop%>: <%= diff[prop] %></li>
                                 <% } %>
                             <% } %>
+                            <hr>
                         </ul>
                         <p>These changes were made by <b><%=updatedByName%></b> (@<%=updatedBy%>)</p>
                     </div>

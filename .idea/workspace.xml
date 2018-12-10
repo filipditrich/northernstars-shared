@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f67c1e8d-b15a-44fc-b2e4-20a19ead2d2d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/helpers/mail.helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/mail.helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/emails/match-update/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/emails/match-update/index.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,16 +16,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/templates/emails/match-update/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+            <state relative-caret-position="345">
+              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mail.helper.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mail.helper.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/helpers/mail.helper.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="33">
@@ -71,8 +71,8 @@
         <option value="$PROJECT_DIR$/src/templates/emails/footer.ejs" />
         <option value="$PROJECT_DIR$/src/helpers/nodemailer.helper.js" />
         <option value="$PROJECT_DIR$/src/assets/system-codes.asset.js" />
-        <option value="$PROJECT_DIR$/src/templates/emails/match-update/index.ejs" />
         <option value="$PROJECT_DIR$/src/helpers/mail.helper.js" />
+        <option value="$PROJECT_DIR$/src/templates/emails/match-update/index.ejs" />
       </list>
     </option>
   </component>
@@ -93,10 +93,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-108" />
-    <option name="y" value="-875" />
-    <option name="width" value="1574" />
-    <option name="height" value="858" />
+    <option name="x" value="-114" />
+    <option name="y" value="-878" />
+    <option name="width" value="1600" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -133,6 +133,21 @@
               <item name="northernstars-shared" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="northernstars-shared" type="b2602c69:ProjectViewProjectNode" />
+              <item name="northernstars-shared" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="emails" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="northernstars-shared" type="b2602c69:ProjectViewProjectNode" />
+              <item name="northernstars-shared" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="emails" type="462c0819:PsiDirectoryNode" />
+              <item name="match-update" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -181,12 +196,12 @@
       <workItem from="1543838579535" duration="553000" />
       <workItem from="1543962028235" duration="1038000" />
       <workItem from="1544001464743" duration="4374000" />
-      <workItem from="1544447503445" duration="5449000" />
+      <workItem from="1544447503445" duration="6053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15463000" />
+    <option name="totallyTimeSpent" value="16067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-114" y="-878" width="1600" height="878" extended-state="6" />
@@ -402,17 +417,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/emails/match-update/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/helpers/mail.helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
           <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/emails/match-update/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
         </state>
       </provider>
     </entry>
