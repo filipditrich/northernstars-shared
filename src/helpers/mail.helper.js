@@ -39,7 +39,7 @@ module.exports.mail = (template, contexts) => {
             }).catch(error => {
                 reject(error);
             });
-        });
+        }).catch(error => reject(error));
     })
 
 };
