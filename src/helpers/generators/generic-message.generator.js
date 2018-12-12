@@ -1,3 +1,7 @@
+exports.inputValidate = function (name, error) {
+    return `Field ${formatName(name)} did not meet the following validation requirement: ${formatName(error)}`;
+};
+
 exports.duplicate = function (name) {
     return `Duplicate value in '${formatName(name)}' field.`;
 };

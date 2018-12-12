@@ -1,5 +1,14 @@
 const messageGenerator = require('./generic-message.generator');
 
+exports.inputValidation = function(field, error) {
+    return {
+        name: `FIELD_${field.toUpperCase()}_FAILED_FOR_${error.toUpperCase()}`,
+        message: messageGenerator.inputValidate(field, error),
+        status: 422,
+        success: false
+    }
+};
+
 exports.duplicate = function(field) {
     return {
         name: `${field.toUpperCase()}_DUPLICATE`,
@@ -76,7 +85,7 @@ exports.create = function (field) {
     return {
         name: `${field.toUpperCase()}_CREATE_OK`,
         message: messageGenerator.create(field),
-        status: 200,
+        status: 201,
         success: true
     }
 };
