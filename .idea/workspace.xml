@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f67c1e8d-b15a-44fc-b2e4-20a19ead2d2d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/generators/generic-code.generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/generators/generic-code.generator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/generators/generic-message.generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/generators/generic-message.generator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/validator.helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/validator.helper.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,8 +22,8 @@
       <file leaf-file-name="validator.helper.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/helpers/validator.helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1531">
-              <caret line="2" lean-forward="true" selection-end-line="140" selection-end-column="2" />
+            <state relative-caret-position="495">
+              <caret line="166" selection-start-line="166" selection-end-line="166" />
             </state>
           </provider>
         </entry>
@@ -191,19 +188,19 @@
       <workItem from="1544001464743" duration="4374000" />
       <workItem from="1544447503445" duration="7151000" />
       <workItem from="1544483010516" duration="778000" />
-      <workItem from="1544559582133" duration="9605000" />
+      <workItem from="1544559582133" duration="11920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27548000" />
+    <option name="totallyTimeSpent" value="29863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-114" y="-878" width="1600" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15389487" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15389487" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -211,7 +208,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.11139565" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18693982" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -481,8 +478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/helpers/validator.helper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1531">
-          <caret line="2" lean-forward="true" selection-end-line="140" selection-end-column="2" />
+        <state relative-caret-position="495">
+          <caret line="166" selection-start-line="166" selection-end-line="166" />
         </state>
       </provider>
     </entry>
