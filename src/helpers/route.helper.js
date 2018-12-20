@@ -1,13 +1,17 @@
 const _ = require('lodash');
+let routes, settings;
 
 /**
  * @description Imports Routes
  * @param imported
  */
-let routes;
-exports.importRoutes = (imported) => {
-    routes = imported;
-};
+exports.importRoutes = (imported) => { routes = imported; };
+
+/**
+ * @description Imports Settings
+ * @param imported
+ */
+exports.importSettings = (imported) => { settings = imported };
 
 /**
  * @description Generic Route Handler
@@ -16,8 +20,8 @@ exports.importRoutes = (imported) => {
  * @param next
  */
 exports.genericRouteHandler = (req, res, next) => {
-    
-    const route = _.find(routes, _route => {
+
+    const route = _.find(exports.routes, _route => {
         return (new RegExp(_route.regexp)).test(req.path) && _route.method.toUpperCase() === req.method.toUpperCase();
     });
 
@@ -33,13 +37,17 @@ exports.genericRouteHandler = (req, res, next) => {
             req.params[param] = params[i];
         });
 
-        // run all middleware functions
+
         const middleware = [];
-        _.each(route.middleware, _middleware => {
-            if (_middleware) {
-                middleware.push(_middleware(req, res, next));
-            }
-        });
+        // if the bypass secret is valid bypass all middlewares
+        if (req.headers['x-bypass'] !== settings.secret) {
+            // run all middleware functions
+            _.each(route.middleware, _middleware => {
+                if (_middleware) {
+                    middleware.push(_middleware(req, res, next));
+                }
+            });
+        }
 
         Promise.all(middleware).then(() => {
 

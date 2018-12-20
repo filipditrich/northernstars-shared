@@ -113,6 +113,7 @@ exports.microserviceCommunication = (req, res, next) => {
  */
 exports.verifyToken = (req, res, next) => {
     return new Promise((resolve, reject) => {
+
         const token = req.headers['authorization'];
 
         if (!token) reject(errorHelper.prepareError(codes.AUTH.ROLES.UNAUTHORIZED_ACCESS));
@@ -128,5 +129,6 @@ exports.verifyToken = (req, res, next) => {
                 resolve(decoded);
             }
         });
+
     });
 };
