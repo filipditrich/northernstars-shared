@@ -12,7 +12,7 @@ exports.updateService = function (serviceConfig) {
 
     return request({
         method: 'POST',
-        uri: `http://${serviceConfig.services.operator.host}:${serviceConfig.services.operator.port}/api/sys/services`,
+        uri: `http://${serviceConfig.root.host}:${serviceConfig.root.port}/api/sys/services`,
         headers,
         body: {
             service: serviceConfig
