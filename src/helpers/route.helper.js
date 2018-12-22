@@ -21,7 +21,7 @@ exports.importSettings = (imported) => { settings = imported };
  */
 exports.genericRouteHandler = (req, res, next) => {
 
-    const route = _.find(exports.routes, _route => {
+    const route = _.find(routes, _route => {
         return (new RegExp(_route.regexp)).test(req.path) && _route.method.toUpperCase() === req.method.toUpperCase();
     });
 
