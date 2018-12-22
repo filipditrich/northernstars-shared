@@ -6,9 +6,10 @@ module.exports = {
     },
 
     PASSWORD: {
-        MIN_LENGTH: 6,
+        MIN_LENGTH: 3,
         MAX_LENGTH: 32,
-        REG_EXP: /^(?=.*\d)(?=.*[a-z0-9])(?=.*[A-z]).*$/
+        // REG_EXP: /^(?=.*\d)(?=.*[a-z0-9])(?=.*[A-z]).*$/
+        REG_EXP: /^(?=.*[a-z0-9]).*$/
     },
 
     EMAIL: {
