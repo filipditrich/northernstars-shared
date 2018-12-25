@@ -1,6 +1,6 @@
 const messageGenerator = require('./generic-message.generator');
 
-exports.inputValidation = function(field, error) {
+exports.inputValidation = (field, error) => {
     return {
         name: `FIELD_${field.toUpperCase()}_FAILED_FOR_${error.toUpperCase()}`,
         message: messageGenerator.inputValidate(field, error),
@@ -9,7 +9,7 @@ exports.inputValidation = function(field, error) {
     }
 };
 
-exports.duplicate = function(field) {
+exports.duplicate = (field) => {
     return {
         name: `${field.toUpperCase()}_DUPLICATE`,
         message: messageGenerator.duplicate(field),
@@ -18,7 +18,16 @@ exports.duplicate = function(field) {
     }
 };
 
-exports.invalid = function(field) {
+exports.unique = (field) => {
+    return {
+        name: `${field.toUpperCase()}_UNIQUE`,
+        message: messageGenerator.unique(field),
+        status: 400,
+        success: false
+    }
+};
+
+exports.invalid = (field) => {
     return {
         name: `${field.toUpperCase()}_INVALID`,
         message: messageGenerator.invalid(field),
@@ -27,7 +36,7 @@ exports.invalid = function(field) {
     }
 };
 
-exports.notFound = function(field) {
+exports.notFound = (field) => {
     return {
         name: `${field.toUpperCase()}_NOT_FOUND`,
         message: messageGenerator.notFound(field),
@@ -36,7 +45,7 @@ exports.notFound = function(field) {
     }
 };
 
-exports.multipleNotFound = function(field) {
+exports.multipleNotFound = (field) => {
     return {
         name: `NO_${field.toUpperCase()}S_FOUND`,
         message: messageGenerator.multipleNotFound(field),
@@ -45,7 +54,7 @@ exports.multipleNotFound = function(field) {
     }
 };
 
-exports.missing = function(field) {
+exports.missing = (field) => {
     return {
         name: `${field.toUpperCase()}_MISSING`,
         message: messageGenerator.missing(field),
@@ -54,7 +63,7 @@ exports.missing = function(field) {
     }
 };
 
-exports.required = function(field) {
+exports.required = (field) => {
     return {
         name: `${field.toUpperCase()}_REQUIRED`,
         message: messageGenerator.required(field),
@@ -63,7 +72,25 @@ exports.required = function(field) {
     }
 };
 
-exports.fail = function(field, status = 400) {
+exports.minLength = (field, minLength) => {
+    return {
+        name: `${field.toUpperCase()}_MIN_LENGTH`,
+        message: messageGenerator.minLength(field, minLength),
+        status: 422,
+        success: false
+    }
+};
+
+exports.maxLength = (field, maxLength) => {
+    return {
+        name: `${field.toUpperCase()}_MAX_LENGTH`,
+        message: messageGenerator.maxLength(field, maxLength),
+        status: 422,
+        success: false
+    }
+};
+
+exports.fail = (field, status = 400) => {
     return {
         name: `${field.toUpperCase()}_FAILED`,
         message: messageGenerator.fail(field),
@@ -72,7 +99,7 @@ exports.fail = function(field, status = 400) {
     }
 };
 
-exports.success = function(field) {
+exports.success = (field) => {
     return {
         name: `${field.toUpperCase()}_SUCCESSFUL`,
         message: messageGenerator.success(field),
@@ -81,7 +108,7 @@ exports.success = function(field) {
     }
 };
 
-exports.create = function (field) {
+exports.create = (field) => {
     return {
         name: `${field.toUpperCase()}_CREATE_OK`,
         message: messageGenerator.create(field),
@@ -90,7 +117,7 @@ exports.create = function (field) {
     }
 };
 
-exports.update = function (field) {
+exports.update = (field) => {
     return {
         name: `${field.toUpperCase()}_UPDATE_OK`,
         message: messageGenerator.update(field),
@@ -99,7 +126,7 @@ exports.update = function (field) {
     }
 };
 
-exports.delete = function (field) {
+exports.delete = (field) => {
     return {
         name: `${field.toUpperCase()}_DELETE_OK`,
         message: messageGenerator.delete(field),

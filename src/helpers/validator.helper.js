@@ -20,6 +20,10 @@ exports.passwordStrength = function (password) {
     return schemaFields.PASSWORD.REG_EXP.test(password);
 };
 
+/**
+ * @description Input Validator class
+ * @type {inputValidator}
+ */
 exports.inputValidator = class {
 
     /**
@@ -82,7 +86,7 @@ exports.inputValidator = class {
     static isEmail(val) { return schemaFields.EMAIL.REG_EXP.test(val); }
 
     /**
-     * @description If value's length is larger than <min>
+     * @description If value's length or value itself is larger than <min>
      * @param val
      * @param min
      * @return {boolean}
@@ -90,7 +94,7 @@ exports.inputValidator = class {
     static min(val, min) { return this.isNumber(val) ? val >= min : val.length >= min; }
 
     /**
-     * @description If value's length is not larger than <max>
+     * @description If value's length or value itself is not larger than <max>
      * @param val
      * @param max
      * @return {boolean}
@@ -148,9 +152,9 @@ exports.inputValidator = class {
                     case 'required': return this.isPresent(value) ? false : rule.name;
                     case 'objectId': return this.isObjectId(value) ? false : rule.name;
                     case 'date': return this.isDate(value) ? false : rule.name;
+                    case 'email': return this.isEmail(value) ? false : rule.name;
                     case 'number': return this.isNumber(value) ? false : rule.name;
                     case 'boolean': return this.isBoolean(value) ? false : rule.name;
-                    case 'email': return this.isEmail(value) ? false : rule.name;
                     case 'min': return this.min(value, rule.value) ? false : rule.name;
                     case 'max': return this.max(value, rule.value) ? false : rule.name;
                     case 'regExp': return this.regExp(value, rule.value) ? false : rule.name;
