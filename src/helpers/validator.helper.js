@@ -75,6 +75,13 @@ exports.inputValidator = class {
     }
 
     /**
+     * @description If value is a valid email address
+     * @param val
+     * @return {boolean}
+     */
+    static isEmail(val) { return schemaFields.EMAIL.REG_EXP.test(val); }
+
+    /**
      * @description If value's length is larger than <min>
      * @param val
      * @param min
@@ -143,6 +150,7 @@ exports.inputValidator = class {
                     case 'date': return this.isDate(value) ? false : rule.name;
                     case 'number': return this.isNumber(value) ? false : rule.name;
                     case 'boolean': return this.isBoolean(value) ? false : rule.name;
+                    case 'email': return this.isEmail(value) ? false : rule.name;
                     case 'min': return this.min(value, rule.value) ? false : rule.name;
                     case 'max': return this.max(value, rule.value) ? false : rule.name;
                     case 'regExp': return this.regExp(value, rule.value) ? false : rule.name;
