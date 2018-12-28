@@ -28,12 +28,12 @@ module.exports = {
     production: {
         email: {
             transporter: {
-                host: 'smtp.gmail.com',
+                host: 'smtp.onebit.cz',
                 port: 587,
                 secure: false,
                 auth: {
-                    user: 'nsteamapp@gmail.com',
-                    pass: '96WXrBHfsCnNazR7'
+                    user: 'support@northernstars.cz',
+                    pass: '64R7Ja7dHP22vxbn'
                 }
             },
             sender: '"NS TeamApp" <nsteamapp@gmail.com>'
