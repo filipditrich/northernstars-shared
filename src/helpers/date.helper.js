@@ -35,7 +35,7 @@ exports.formatDates = (obj, fieldArr, timezone) => {
             });
         } else {
             // the <fin> value is only the formatted date
-            fin = momentTz(val).tz(timezone).format();
+            fin = val ? momentTz(val).tz(timezone).format() : '';
         }
 
         // set the final value
