@@ -12,6 +12,7 @@ exports.genericHelper = require('./src/helpers/generic.helper');
 exports.errorHelper = require('./src/helpers/error.helper');
 exports.enumHelper = require('./src/helpers/enum.helper');
 exports.codeHelper = require('./src/helpers/code.helper');
+exports.dateHelper = require('./src/helpers/date.helper');
 
 /**
  * Generators
