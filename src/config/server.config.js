@@ -36,7 +36,7 @@ module.exports = {
                     pass: '64R7Ja7dHP22vxbn'
                 }
             },
-            sender: '"TeamApp Support" <support@northernstars.cz'
+            sender: '"TeamApp Support" <support@northernstars.cz>'
         },
         secret: {
             secret: '937a43fc73c501dfa94d7dcf0cf668e0',
